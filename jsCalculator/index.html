@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(193, 126, 44);
+        }
+
+        .text {
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            position: absolute;
+            left: 40%;
+            top: 20%;
+        }
+
+        .screen {
+            height: 40px;
+            width: 100%;
+            background: #fff;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+
+        .screen h4 {
+            text-align: end;
+            position: absolute;
+            top: 0%;
+            right: 1%;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .buttons .last {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text">Javascript Calculator</h1>
+    <div class="container">
+        <div class="screen">
+            <h4>5694</h4>
+        </div>
+        <div class="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>+</button>
+        </div>
+        <div class="buttons">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+        </div>
+        <div class="buttons">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>*</button>
+        </div>
+        <div class="buttons">
+            <button>0</button>
+            <button>%</button>
+            <button>.</button>
+            <button>/</button>
+        </div>
+        <div class="buttons">
+            <button class="last">=</button>
+            <button class="last">C</button>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
