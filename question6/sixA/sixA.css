@@ -1,0 +1,37 @@
+.first-div{
+    border: solid 5px red;
+    text-align: center;
+    margin: 20px 15px 15px 15px;
+    background-color: yellow;
+}
+h1{
+    font-size: 50px;
+    color: green;
+}
+
+.second-div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+}
+
+h5{
+    font-size: 25px;
+    color:rgb(241, 86, 112);
+}
+
+.third-div{
+    border: 2px dotted black;
+     margin: 20px 15px 15px 15px;
+     padding: 0 0 0 0;
+}
+
+.fourth-div{
+     margin: 20px 15px 15px 15px;
+     background-color: bisque;
+}
