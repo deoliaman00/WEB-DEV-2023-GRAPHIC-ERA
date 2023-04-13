@@ -5,83 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #mainhead {
-            text-align: center;
-            color: green;
-            background: yellow;
-            border: 3px solid red;
-            height: 70px;
-            width: 80%;
-            margin-left: 7rem;
-            padding-top: 1rem;
-        }
-
-        ul#first {
-            display: flex;
-            align-items: center;
-            padding-left: 7rem;
-        }
-
-        #first li {
-            list-style-type: none;
-            margin-right: 12rem;
-            color: red;
-            font-size: 20px;
-        }
-
-        h3#second {
-            background-color: hotpink;
-            color: rgb(87, 1, 87);
-            font-weight: 200;
-            border: 1.5px dotted #222;
-            margin-left: 7rem;
-            width: 80%;
-        }
-
-        h5#third {
-            color: red;
-            font-size: 17px;
-            margin-left: 7rem;
-
-        }
-
-        #fourth {
-            border: 3px dashed blue;
-            background: lightgreen;
-            height: 100px;
-            width: 80%;
-            color: red;
-            margin-left: 7rem;
-        }
-
-        #fourth ul li span {
-            font-size: 24px;
-            font-weight: bold;
-
-        }
-    </style>
+    <title>Dialer</title>
 </head>
 
 <body>
+    <map name="circle-map">
+        <area shape="circle" coords="150,100,50" href="#" onclick="alert('You pushed button 1')" alt="Button 1">
+        <area shape="circle" coords="260,100,50" href="#" onclick="alert('You pushed button 2')" alt="Button 2">
+        <area shape="circle" coords="380,100,50" href="#" onclick="alert('You pushed button 3')" alt="Button 3">
 
-    <h1 id="mainhead">This Is My Stylish Website</h1>
-    <ul id="first">
-        <li>Home</li>
-        <li>Backgrounds</li>
-        <li>Lists</li>
-        <li>Id vs Class</li>
-    </ul>
-    <h3 id="second">This website is about me!</h3>
-    <h5 id="third">My Top three favourite things to do</h5>
-    <div id="fourth">
-        <ul>
-            <li><span>T</span>ravel</li>
-            <li><span>E</span>at ice cream</li>
-            <li><span>R</span>ead a book</li>
-        </ul>
-    </div>
+        <area shape="circle" coords="150,220,50" href="#" onclick="alert('You pushed button 4')" alt="Button 4">
+        <area shape="circle" coords="260,220,50" href="#" onclick="alert('You pushed button 5')" alt="Button 5">
+        <area shape="circle" coords="380,220,50" href="#" onclick="alert('You pushed button 6')" alt="Button 6">
+
+
+        <area shape="circle" coords="150,330,50" href="#" onclick="alert('You pushed button 7')" alt="Button 7">
+        <area shape="circle" coords="260,330,50" href="#" onclick="alert('You pushed button 8')" alt="Button 8">
+        <area shape="circle" coords="380,330,50" href="#" onclick="alert('You pushed button 9')" alt="Button 9">
+
+
+
+        <area shape="circle" coords="150,440,50" href="#" onclick="alert('You pushed button *')" alt="Button *">
+        <area shape="circle" coords="260,440,50" href="#" onclick="alert('You pushed button 0')" alt="Button 0">
+        <area shape="circle" coords="380,440,50" href="#" onclick="alert('You pushed button #')" alt="Button #">
+
+
+
+    </map>
+
+    <img src="calc.jpeg" alt="Image" usemap="#circle-map">
+
+
 </body>
 
 </html>
