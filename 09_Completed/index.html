@@ -25,14 +25,19 @@
             background-color: rgb(193, 126, 44);
             border-top: 10px solid black;
             border-bottom: 10px solid black;
+            align-items: center;
         }
         .buttons{
+            display:flex;
             text-align: center;
             margin-top: 4px;
             margin-bottom: 4px;
             margin-left: 4px;
             margin-right: 4px;
             
+        }
+        .buttons-div{
+            margin-left: 37%;
         }
         button{
             width: 90px;
@@ -56,42 +61,44 @@
     <div id="calcydiv">
         
         <div id="screen"><button style="width: 22%; background-color: white; text-align: right;" id="kk"></button></div>
+        <div class="buttons-div">
 
-       <div class="buttons">
-        <button onclick="kk.innerHTML+=7">7</button>
-        <button onclick="kk.innerHTML+=8">8</button>
-        <button onclick="kk.innerHTML+=9">9</button>
-        <button onclick="kk.innerHTML+='+'">+</button>
-
-       </div>
-
-       <div class="buttons">
-        <button onclick="kk.innerHTML+=4">4</button>
-        <button onclick="kk.innerHTML+=5">5</button>
-        <button onclick="kk.innerHTML+=6">6</button>
-        <button  onclick="kk.innerHTML+='-'">-</button>
-
-       </div>
-       <div class="buttons">
-        <button onclick="kk.innerHTML+=1">1</button>
-        <button onclick="kk.innerHTML+=2">2</button>
-        <button onclick="kk.innerHTML+=3">3</button>
-        <button  onclick="kk.innerHTML+=''"></button>
-
-       </div>
-       <div class="buttons">
-        <button onclick="kk.innerHTML+=0">0</button>
-        <button  onclick="kk.innerHTML+='%'">%</button>
-        <button onclick="kk.innerHTML+='.'">.</button>
-        <button  onclick="kk.innerHTML+='/'">/</button>
-
-       </div>
-       <div class="buttons">
-        <button style="width:10%" onclick="kk.innerHTML=eval(kk.innerHTML)">=</button>
-        <button style="width:10%" onclick="kk.innerHTML=''">c</button>
+            <div class="buttons">
+             <button onclick="kk.innerHTML+=7">7</button>
+             <button onclick="kk.innerHTML+=8">8</button>
+             <button onclick="kk.innerHTML+=9">9</button>
+             <button onclick="kk.innerHTML+='+'">+</button>
+            
+            </div>
         
-
-       </div>
+            <div class="buttons">
+             <button onclick="kk.innerHTML+=4">4</button>
+             <button onclick="kk.innerHTML+=5">5</button>
+             <button onclick="kk.innerHTML+=6">6</button>
+             <button  onclick="kk.innerHTML+='-'">-</button>
+            
+            </div>
+            <div class="buttons">
+             <button onclick="kk.innerHTML+=1">1</button>
+             <button onclick="kk.innerHTML+=2">2</button>
+             <button onclick="kk.innerHTML+=3">3</button>
+             <button  onclick="kk.innerHTML+=''"></button>
+            
+            </div>
+            <div class="buttons">
+             <button onclick="kk.innerHTML+=0">0</button>
+             <button  onclick="kk.innerHTML+='%'">%</button>
+             <button onclick="kk.innerHTML+='.'">.</button>
+             <button  onclick="kk.innerHTML+='/'">/</button>
+            
+            </div>
+            <div class="buttons">
+             <button style="width:20%" onclick="kk.innerHTML=eval(kk.innerHTML)">=</button>
+             <button style="width:20%" onclick="kk.innerHTML=''">c</button>
+            
+            
+            </div>
+        </div>
        
     </div>
 
