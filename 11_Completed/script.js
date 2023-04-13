@@ -1,4 +1,4 @@
-var clickableDiv=document.querySelector('.main-div');
+var clickableDiv=document.body;
 
 clickableDiv.addEventListener('click',function () {
     var randomColor=getRandomColor();
