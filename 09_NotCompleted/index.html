@@ -1,99 +1,115 @@
+<!--Contributed by mridulgupta75-->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcy</title>
     <style>
-        body {
+        #topconto{
             background-color: rgb(193, 126, 44);
+            border-left: 20px solid black;
+            border-right: 20px solid black;
+            border-bottom: 20px solid black;
         }
-
-        .text {
+        #topcontor{
+            background-color: rgb(193, 126, 44);
+            border-top: 20px solid black;
+            border-right: 20px solid black;
+            border-left: 20px solid black;
+          
+        }
+        #calcydiv{
+            background-color: rgb(193, 126, 44);
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
+        }
+        .buttons{
             text-align: center;
-            color: #fff;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            margin-left: 4px;
+            margin-right: 4px;
+            
         }
-
-        .container {
-            position: absolute;
-            left: 40%;
-            top: 20%;
+        button{
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            font-size: 20px;
         }
-
-        .screen {
-            height: 40px;
-            width: 100%;
-            background: #fff;
-            margin-bottom: 5px;
-            border-radius: 4px;
-        }
-
-        .screen h4 {
-            text-align: end;
-            position: absolute;
-            top: 0%;
-            right: 1%;
-            color: #333;
-        }
-
-        .buttons {
-            display: flex;
-        }
-
-        .buttons button {
-            width: 50px;
-            height: 50px;
-            margin-right: 2px;
-            margin-bottom: 2px;
-            border-radius: 4px;
-            border: none;
-        }
-
-        .buttons .last {
-            width: 50%;
+        #screen{
+            text-align: center;
+            /* width: 20%;
+            background-color: white; */
+            
         }
     </style>
 </head>
-
 <body>
-    <h1 class="text">Javascript Calculator</h1>
-    <div class="container">
-        <div class="screen">
-            <h4>5694</h4>
-        </div>
-        <div class="buttons">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>+</button>
-        </div>
-        <div class="buttons">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-        </div>
-        <div class="buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>*</button>
-        </div>
-        <div class="buttons">
-            <button>0</button>
-            <button>%</button>
-            <button>.</button>
-            <button>/</button>
-        </div>
-        <div class="buttons">
-            <button class="last">=</button>
-            <button class="last">C</button>
-
-        </div>
+    <div style="font-size:90px;text-align: center;" id="topconto">
+        Javascript Calculator
+        
     </div>
-    <script src="index.js"></script>
+    <div id="calcydiv">
+        
+        <div id="screen"><button style="width: 22%; background-color: white; text-align: right;" id="kk"></button></div>
+
+       <div class="buttons">
+        <button onclick="kk.innerHTML+=7">7</button>
+        <button onclick="kk.innerHTML+=8">8</button>
+        <button onclick="kk.innerHTML+=9">9</button>
+        <button onclick="kk.innerHTML+='+'">+</button>
+
+       </div>
+
+       <div class="buttons">
+        <button onclick="kk.innerHTML+=4">4</button>
+        <button onclick="kk.innerHTML+=5">5</button>
+        <button onclick="kk.innerHTML+=6">6</button>
+        <button  onclick="kk.innerHTML+='-'">-</button>
+
+       </div>
+       <div class="buttons">
+        <button onclick="kk.innerHTML+=1">1</button>
+        <button onclick="kk.innerHTML+=2">2</button>
+        <button onclick="kk.innerHTML+=3">3</button>
+        <button  onclick="kk.innerHTML+=''"></button>
+
+       </div>
+       <div class="buttons">
+        <button onclick="kk.innerHTML+=0">0</button>
+        <button  onclick="kk.innerHTML+='%'">%</button>
+        <button onclick="kk.innerHTML+='.'">.</button>
+        <button  onclick="kk.innerHTML+='/'">/</button>
+
+       </div>
+       <div class="buttons">
+        <button style="width:10%" onclick="kk.innerHTML=eval(kk.innerHTML)">=</button>
+        <button style="width:10%" onclick="kk.innerHTML=''">c</button>
+        
+
+       </div>
+       
+    </div>
+
+
+    </div>
+    <div style="font-size:90px;text-align: center;height:110px;" id="topcontor">
+     
+        
+    </div>
+
+    
+    
 </body>
 
+<script>
+
+
+
+
+</script>
 </html>
