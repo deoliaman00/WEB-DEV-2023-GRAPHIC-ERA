@@ -1,59 +1,67 @@
-// Get the month and year select elements
-var monthSelect = document.getElementById("monthSelect");
-var yearSelect = document.getElementById("yearSelect");
+const year = document.getElementById('year');
+const month = document.getElementById('month');
+const btn = document.getElementById('ok');
+const monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'December'];
+const output = document.getElementById('output');
+const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-// Populate the year select with options for the years from 2000 to 2030
-for (var i = 2000; i <= 2030; i++) {
-  var option = document.createElement("option");
-  option.value = i;
-  option.text = i;
-  yearSelect.add(option);
+for(var i = 1990; i < 2050; i++)
+{
+    year.innerHTML += `<option value = ${i}>${i}</option>`;
 }
 
-// Function to display the calendar for the selected month and year
-function displayCalendar() {
-  var month = parseInt(monthSelect.value);
-  var year = parseInt(yearSelect.value);
-  var calendarContainer = document.getElementById("calendarContainer");
+btn.addEventListener('click', (e) => {
+    var m = +month.value + 1;
+    var D = year.value % 100;
+    var C = Math.floor(year.value / 100);
+    var last = days[month.value];
 
-  // Clear any existing calendar
-  calendarContainer.innerHTML = "";
-
-  // Create a new table element for the calendar
-  var table = document.createElement("table");
-
-  // Create the table header with the days of the week
-  var headerRow = document.createElement("tr");
-  var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  for (var i = 0; i < daysOfWeek.length; i++) {
-    var th = document.createElement("th");
-    th.textContent = daysOfWeek[i];
-    headerRow.appendChild(th);
-  }
-  table.appendChild(headerRow);
-
-  // css
-  // Copy code
-  // Create the table rows for the calendar days
-  var date = new Date(year, month - 1, 1);
-  var lastDay = new Date(year, month, 0).getDate();
-  var firstDayOfWeek = date.getDay();
-  var currentDay = 1;
-
-  while (currentDay <= lastDay) {
-    var row = document.createElement("tr");
-
-    for (var i = 0; i < 7; i++) {
-      var td = document.createElement("td");
-      if (i >= firstDayOfWeek && currentDay <= lastDay) {
-        td.textContent = currentDay;
-        currentDay++;
-      }
-      row.appendChild(td);
+    if(m > 2)
+        m -= 2;
+    else
+    {
+        m += 10;
+        D -= 1;
     }
 
-    table.appendChild(row);
-  }
+    var f = 1 + Math.floor((13 * m - 1) / 5) + D + Math.floor(D / 4) + Math.floor(C / 4) - 2 * C;
+    if(f < 0)
+        f = 7000 + f;
+    f = f % 7;
 
-  calendarContainer.appendChild(table);
-}
+    outputHTML = `<table border='2' cellpadding='20'> <tr><th colspan='7'>${monthName[month.value]} ${year.value}</tr> <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thur</th><th>Fri</th><th>Sat</th></tr>`
+
+    var count = 1;
+
+    var row = '<tr>'
+
+    for(var temp = 0; temp < f; temp++)
+        row += '<td></td>';
+    
+    for(var c = f; c < 7; c++)
+    {
+        row += `<td>${count}</td>`;
+        count += 1;
+    }
+
+    row += '</tr>';
+
+    outputHTML += row;
+
+    while(count <= last)
+    {
+        row = '<tr>'
+        var tot = 0;
+
+        for(; tot < 7 && count <= last; tot++, count++)
+            row += `<td>${count}</td>`;
+
+        row += '</tr>';
+        outputHTML += row;
+    }
+
+
+    outputHTML += '</table>';
+
+    output.innerHTML = outputHTML;
+})
