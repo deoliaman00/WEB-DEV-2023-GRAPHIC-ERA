@@ -13,24 +13,43 @@
     <div class="head-div">
         <h1>Entry Form</h1>
     </div>
-    <div class="form-div">
-        <form action="#">
-            <div class="grid-container">
-                <div class="left"> <label for="name">Entry for Name: </label></div>
-                <div class="right"><input type="text"><br></div>
-                <div class="left"> <label for="age">Age:</label></div>
-                <div class="right"><input type="number"><br></div>
-                <div class="left"> <label for="address">Enter your Address: </label></div>
-                <div class="right"><input type="textfield"><br></div>
-                <div class="left"> <label for="sex">Sex:</label></div>
-                <div class="right"><input type="radio" id="male" name="sex" value="male">
+    <div class="form-table">
+        <table>
+            <tr class="tr-div">
+                <th><label for="name">Entry for Name: </label></th>
+                <td><input type="text"></td>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="age">Age:</th>
+                <td><input type="number"></td>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="address">Enter your Address: </label></th>
+                <td><input type="text"></td>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="sex">Sex:</label></th>
+                <td><input type="radio" id="male" name="sex" value="male">
                     <label for="male">Male</label><br>
-
                     <input type="radio" id="women" name="sex" value="women">
-                    <label for="women">Women</label><br>
-                </div>
-                <div class="left"><label for="languages">Languages</label><br></div>
-                <div class="right"><input type="checkbox" id="c" name="languages" value="c">
+                    <label for="women">Women</label>
+                </td><br>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="nationality">Nationality:</label></th>
+                <td><select  class="select-div" name="country" id="country" placeholder="Choose a country">
+                    <option value="" disabled selected>Choose an option</option>
+                    <option class="select-div" value="india">India</option>
+                    <option class="select-div" value="uk">UK</option>
+                    <option class="select-div" value="america">America</option>
+                    <option class="select-div" value="france">France</option>
+                </select>
+                </td><br>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="languages">Languages</label></th>
+                <td>
+                    <input type="checkbox" id="c" name="languages" value="c">
                     <label for="c">C</label><br>
 
                     <input type="checkbox" id="" name="languages" value="c++">
@@ -47,28 +66,20 @@
 
                     <input type="checkbox" id="" name="languages" value="others">
                     <label for="others">Others</label><br>
-                </div>
-                <div class="left">
-                    <label for="password">Enter your Password:</label>
-                </div>
-                <div class="right">
-                    <input type="password"><br>
-                    <input type="reset">
-                    <input type="submit">
-                </div>
 
-            </div>
-
-
-
-
-
-
-
-
-
-        </form>
+                </td>
+            </tr>
+            <tr class="tr-div">
+                <th><label for="password">Enter your Password:</label></th>
+                <td><input type="password"><br></td>
+            </tr>
+        </table>
+        <div class="button-div">
+            <input class="buttons" type="reset">
+            <input class="buttons" type="submit">
+        </div>
     </div>
+    
 </body>
 
 </html>

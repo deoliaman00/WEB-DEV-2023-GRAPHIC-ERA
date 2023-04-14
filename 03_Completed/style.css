@@ -24,3 +24,26 @@
 .left{
     margin:0;
 }
+
+.form-table{
+  font-size: 25px;
+  margin-left: 35%;
+}
+
+.buttons{
+  width: 100px;
+  height:35px;
+}
+
+.tr-div{
+  margin-left:200px;
+}
+
+.button-div{
+  margin-left:220px;
+  margin-top:20px;
+}
+
+.select-div{
+  width:150px;
+}
