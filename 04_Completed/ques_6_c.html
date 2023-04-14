@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(250, 144, 161);
+        }
+        #header{
+            background-color:rgb(0, 255, 251);
+            color: white;
+            text-align: center;
+            height: 4vmax;
+            margin-left: 2vmax;
+            margin-right: 2vmax;
+            margin-top: 2vmax;   
+        }
+        #footer{
+            background-color:rgb(0, 255, 251);
+            color: white;
+            text-align: center;
+            margin-bottom: 1vmax;
+            margin-left: 2vmax;
+            margin-right: 2vmax;
+   
+        }
+        p span{
+            display: inline-block;
+            margin-top: 1vmax;
+            font-size: larger;
+            font-size: solid;
+        }
+        .container .box
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .container .box .box1
+        {
+            background-color: rgb(15, 195, 195);
+            height:38vmax;
+            margin-left: 2vmax;
+            width: 40vmin;
+            text-align: center;
+        }
+        .container .box .box1 span{
+           
+            color: white;
+            display: inline-block;
+            margin-top: 16vmax;
+            font-size: 2vmax;
+        }
+        .container .box .box2
+        {
+            background-color: rgb(247, 119, 119);
+            margin-left: 4vmax;
+            margin-right: 2vmax;
+            width:75vmax;
+            text-align:center;
+        }
+        .container .box .box2 p{
+            color: white;
+            margin-top: 15vmax;
+            font-size: 2vmax;
+        }
+        .container .box .box2 span
+        {
+            background-color: rgba(247, 242, 242, 0.903);
+            display: inline-block;
+            width: 15vmax;
+            height: 15vmax;
+            margin-left: 4vmax;
+            margin-top: 2vmax;
+            color: white;
+            font-size: 2vmax;
+        }
+    </style>
+</head>
+<body>
+    <p id="header"><span>HEADER</span></p>
+    <div class="container">
+        <div class="box">
+            <div class="box1">
+                <span>Aside</span>
+            </div>
+            <div class="box2">
+                <p>Article</p>
+                <span>Image</span>
+                <span>Image</span>
+                <span>Image</span>
+            </div>
+        </div>
+    </div>
+    <p id="footer"><span>FOOTER</span></p>
+</body>
+</html>
