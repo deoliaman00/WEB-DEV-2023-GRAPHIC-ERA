@@ -12,9 +12,9 @@ for(var i = 1990; i < 2050; i++)
 
 btn.addEventListener('click', (e) => {
     var m = +month.value + 1;
-    var D = year.value % 100;
-    var C = Math.floor(year.value / 100);
-    var last = days[month.value];
+    var D = year.value % 100; //to ge the last two digits of the year value
+    var C = Math.floor(year.value / 100); //to get the first two digits of the year value
+    var last = days[month.value]; // the last no of the month entitiy  
 
     if(m > 2)
         m -= 2;
